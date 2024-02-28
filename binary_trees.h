@@ -1,12 +1,12 @@
-#ifndef BINARY_TREES_H
-#define BINARY_TREES_H
+#ifndef _BINARY_TREES_H_
+#define _BINARY_TREES_H_
 
-//standard library
+/**standard library*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
-//Basic Binary Tree
+/**Basic Binary Tree*/
 /**
  * struct binary_trees_s - Binary tree node
  *
@@ -23,19 +23,23 @@ struct binary_tree_s
 	struct binary_tree_s *right;
 	struct binary_tree_s *left;
 };
-//Typedefine for Binary Tree
+/**Typedefine for Binary Tree*/
 typedef struct binary_tree_s binary_tree_t;
 
-//Typdefine for Binary Search Tree
+/**Typdefine for Binary Search Tree*/
 typedef struct binary_tree_s bst_t;
 
-//Typedefine for Avl Tree
+/**Typedefine for Avl Tree*/
 typedef struct binary_tree_s avl_t;
 
-//Typedefine for Binary Heap
+/**Typedefine for Binary Heap*/
 typedef struct binary_tree_s heap_t;
-/// binary_print_functions for the code
-
+/**binary_print_functions for the code*/
+/** prototype for the binary_tree_print.c */
+/**static int print_t(const binary_tree_t *tree,int offset, int depth, char **s);
+static size_t _height(const binary_tree *tree);
+void binary_tree_print(const binary_tree_t *tree);*/
+/** the protype for binary_tree_print.c ends on this line === 42 */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
@@ -56,5 +60,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *tree);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
-//advance task for the project ;
+/**advance task for the project ;*/
 #endif 
